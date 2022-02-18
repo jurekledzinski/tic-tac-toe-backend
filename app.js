@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, {
   cors: {
-    origin: '',
+    origin: 'https://hungry-tesla-ef1a08.netlify.app',
     credentials: true,
   },
 });
@@ -29,7 +29,7 @@ app.disable('x-powered-by');
 app.use(
   cors({
     credentials: true,
-    origin: '',
+    origin: 'https://hungry-tesla-ef1a08.netlify.app',
   })
 );
 app.use(xss());
