@@ -49,6 +49,10 @@ app.use((req, res, next) => {
 
 app.use('/api/v1/results', resultsRoutes);
 
+app.get('*', (req, res) => {
+  res.status(404).send('Unauthorized');
+});
+
 app.use((error, req, res, next) => {
   res.status(404);
   error.message = 'Not found';
