@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 const connectDb = async (url) => {
   mongoose
     .connect(url)
-    .then(() => {
-      console.log('Baza podłączona poprawnie');
-    })
+    .then()
     .catch((err) => {
       return err;
     });
