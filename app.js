@@ -49,10 +49,6 @@ app.use((req, res, next) => {
 
 app.use('/api/v1/results', resultsRoutes);
 
-app.get('*', (req, res) => {
-  res.status(404).send('Unauthorized');
-});
-
 app.use((error, req, res, next) => {
   res.status(404);
   error.message = 'Not found';
@@ -63,7 +59,6 @@ app.use((error, req, res, next) => {
   res.status(res.statusCode || 500);
   error.message = 'Server error';
   res.json({ message: error });
-  next(error);
 });
 
 module.exports = server;
