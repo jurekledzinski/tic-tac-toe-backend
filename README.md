@@ -22,7 +22,7 @@ Build with:
 
 #### See live
 
-[Find weather](https://hungry-tesla-ef1a08.netlify.app)
+[Tic tac toe](https://hungry-tesla-ef1a08.netlify.app)
 
 ## License
 
